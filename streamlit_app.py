@@ -24,6 +24,7 @@ hide_github_link_style = """
         }
     </style>
 """
+st.markdown(hide_github_link_style, unsafe_allow_html=True)
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -45,6 +46,17 @@ file_db         = 'visitors_db.csv'         ## To store user information
 file_history    = 'visitors_history.csv'    ## To store visitor history information
 
 ## Image formats allowed
+
+hide_github_link_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visiblity: hidden;}
+    header {visibility: hidden;}
+        .viewerBadge_container__1QSob {
+            display: none !important;
+        }
+    </style>
+"""
 allowed_image_type = ['.png', 'jpg', '.jpeg']
 def initialize_data():
     if os.path.exists(os.path.join(data_path, file_db)):
