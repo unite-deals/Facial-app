@@ -47,16 +47,7 @@ file_history    = 'visitors_history.csv'    ## To store visitor history informat
 
 ## Image formats allowed
 
-hide_github_link_style = """
-    <style>
-    #MainMenu {visibility: hidden;}
-    footer {visiblity: hidden;}
-    header {visibility: hidden;}
-        .viewerBadge_container__1QSob {
-            display: none !important;
-        }
-    </style>
-"""
+
 allowed_image_type = ['.png', 'jpg', '.jpeg']
 def initialize_data():
     if os.path.exists(os.path.join(data_path, file_db)):
@@ -161,7 +152,7 @@ def crop_image_with_ratio(img, height,width,middle):
 ################################################### Defining Static Data ###############################################
 
 user_color      = '#000000'
-title_webapp    = "Face Recognition Attendance Sytem"
+title_webapp    = "Face Recognition Attendance Sytem with advanced fake  control"
 
 html_temp = f"""
             <div style="background-color:{user_color};padding:12px">
@@ -197,8 +188,8 @@ mtcnn = MTCNN(
 def main():
     ###################################################
     st.sidebar.header("About")
-    st.sidebar.info("This webapp gives a demo of Attendance System"
-                    " using 'Face Recognition', 'Anti-spoof', and Streamlit")
+    st.sidebar.info("This webapp gives a demo of Facial recognition system"
+                    " using 'AI ', 'Fake blocking ', and custom training")
     ###################################################
     selected_menu = option_menu(None,
         ['Visitor Validation', 'View Visitor History', 'Add to Database'],
