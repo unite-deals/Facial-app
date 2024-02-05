@@ -14,6 +14,24 @@ import torch
 import datetime
 #######################################################
 
+hide_github_link_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visiblity: hidden;}
+    header {visibility: hidden;}
+        .viewerBadge_container__1QSob {
+            display: none !important;
+        }
+    </style>
+"""
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 VISITOR_DB = os.path.join(ROOT_DIR, "visitor_database")
 VISITOR_HISTORY = os.path.join(ROOT_DIR, "visitor_history")
