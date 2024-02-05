@@ -152,7 +152,7 @@ def crop_image_with_ratio(img, height,width,middle):
 ################################################### Defining Static Data ###############################################
 
 user_color      = '#000000'
-title_webapp    = "Face Recognition Attendance Sytem with advanced fake  control"
+title_webapp    = "AI Based Face Recognition real time Attendance Sytem with advanced fake control"
 
 html_temp = f"""
             <div style="background-color:{user_color};padding:12px">
@@ -188,7 +188,7 @@ mtcnn = MTCNN(
 def main():
     ###################################################
     st.sidebar.header("About")
-    st.sidebar.info("This webapp gives a demo of Facial recognition system"
+    st.sidebar.info("This AI webapp gives a demo of Facial recognition system"
                     " using 'AI ', 'Fake blocking ', and custom training")
     ###################################################
     selected_menu = option_menu(None,
